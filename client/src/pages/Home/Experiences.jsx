@@ -41,10 +41,7 @@ function Experiences() {
             {experiences[SelectedItemindex].college}
           </h1>
           <p className="text-white">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-            tempore vitae illum error id voluptatum debitis vero aspernatur,
-            odio quidem officiis! Ratione sint eius ipsam nisi, eum totam fugiat
-            nobis.
+          {experiences[SelectedItemindex].description}
           </p>
         </div>
       </div>

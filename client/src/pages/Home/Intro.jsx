@@ -10,7 +10,7 @@ function Intro() {
       <h1 className="text-7xl sm:text-3xl text-secondary font-semibold">
         {firstName || ""} {lastName || ""}
       </h1>
-      <h1 className="text-7xl sm:text-3xl text-white font-semibold">
+      <h1 className="text-2xl sm:text-3xl text-white font-semibold">
         {caption || ""}
       </h1>
       <p className="text-white w-2/3">{description || ""}</p>
