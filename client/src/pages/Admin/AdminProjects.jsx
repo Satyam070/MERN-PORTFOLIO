@@ -14,7 +14,7 @@ function AdminProjects() {
 
   const onFinish = async (values) => {
     try {
-        const tempTechnologies = values?.technologies?.split(",");
+      const tempTechnologies = values?.technologies?.split(",");
       values.technologies = tempTechnologies;
       dispatch(ShowLoading());
       let response;
@@ -85,7 +85,12 @@ function AdminProjects() {
             <h1 className="text-primary text-xl font-bold">{project.title}</h1>
             <hr />
             <img src={project.image} alt="" className="h-60 w-80" />
-            <h1>Role: {project.title}</h1>
+            <h1>
+              Link:
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.title}
+              </a>
+            </h1>
             <h1>{project.description}</h1>
             <div className="flex justify-end gap-5 mt-5">
               <button

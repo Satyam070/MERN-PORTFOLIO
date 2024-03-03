@@ -2,17 +2,17 @@ import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { useSelector } from "react-redux";
 
-function Experiences() {
+function Educations() {
   const [SelectedItemindex, SetSelectedItemIndex] = React.useState(0);
   const { loading, portfolioData } = useSelector((state) => state.root);
-  const { experiences } = portfolioData;
+  const { educations } = portfolioData;
   return (
     <div>
-      <SectionTitle title="Experience" />
+      <SectionTitle title="Education" />
 
       <div className="flex py-10 gap-20 sm:flex-col">
         <div className="flex flex-col gap-10 border-l-2 border-[#135e4c82] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full">
-          {experiences.map((experience, index) => (
+          {educations.map((education, index) => (
             <div
               key={index}
               onClick={() => {
@@ -27,7 +27,7 @@ function Experiences() {
                     : `text-white`
                 }`}
               >
-                {experience.period}
+                {education.period}
               </h1>
             </div>
           ))}
@@ -35,13 +35,13 @@ function Experiences() {
 
         <div className="flex flex-col gap-5">
           <h1 className="text-secondary text-xl">
-            {experiences[SelectedItemindex].title}
+            {educations[SelectedItemindex].title}
           </h1>
           <h1 className="text-tertiary text-xl">
-            {experiences[SelectedItemindex].college}
+            {educations[SelectedItemindex].college}
           </h1>
           <p className="text-white">
-          {experiences[SelectedItemindex].description}
+            {educations[SelectedItemindex].description}
           </p>
         </div>
       </div>
@@ -49,4 +49,4 @@ function Experiences() {
   );
 }
 
-export default Experiences;
+export default Educations;

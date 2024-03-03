@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 function Projects() {
   const [SelectedItemindex, SetSelectedItemIndex] = React.useState(0);
-  const { loading, portfolioData } = useSelector((state) => state.root);
+  const { portfolioData } = useSelector((state) => state.root);
   const { projects } = portfolioData;
   return (
     <div>
@@ -33,19 +33,29 @@ function Projects() {
           ))}
         </div>
         <div className="flex items-center justify-center gap-10 sm:flex-col">
-            <img src={projects[SelectedItemindex].image} alt="" className="h-60 w-72" />
+          <img
+            src={projects[SelectedItemindex].image}
+            alt=""
+            className="h-60 w-72"
+          />
           <div className="flex flex-col gap-5">
             <h1 className="text-secondary text-xl">
               {projects[SelectedItemindex].title}
             </h1>
+
+            <h1 className="text-tertiary text-l">
+              <a
+                href={projects[SelectedItemindex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-500"
+              >
+                Link
+              </a>
+            </h1>
+
             <p className="text-white">
               {projects[SelectedItemindex].description}
-            </p>
-            <p className="text-white">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Doloremque tempore vitae illum error id voluptatum debitis vero
-              aspernatur, odio quidem officiis! Ratione sint eius ipsam nisi,
-              eum totam fugiat nobis.
             </p>
           </div>
         </div>

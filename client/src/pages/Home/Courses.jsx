@@ -37,14 +37,8 @@ function Courses() {
             <h1 className="text-secondary text-xl">
               {courses[SelectedItemindex].title}
             </h1>
-            {/* <p className="text-white">
-              {courses[SelectedItemindex].description}
-            </p> */}
             <p className="text-white">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Doloremque tempore vitae illum error id voluptatum debitis vero
-              aspernatur, odio quidem officiis! Ratione sint eius ipsam nisi,
-              eum totam fugiat nobis.
+              {courses[SelectedItemindex].description}
             </p>
           </div>
           <img

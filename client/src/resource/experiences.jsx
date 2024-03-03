@@ -1,4 +1,4 @@
-export const experiences = [
+export const educations = [
   {
     college: "ABES Engineering College",
     title: " B.tech",
