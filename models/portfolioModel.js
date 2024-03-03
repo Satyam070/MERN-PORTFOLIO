@@ -21,6 +21,10 @@ const introSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    resume: {
+        type: String,
+        required: true,
+    },
 });
 
 const aboutSchema = new mongoose.Schema({
